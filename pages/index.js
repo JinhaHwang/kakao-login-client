@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <a href="http://localhost:8080/oauth/kakaoAuthorize">
+        <a href="https://zumoney.herokuapp.com/oauth/kakaoAuthorize?redirect_uri=https://localhost:3030">
           <Image
             className={loginStyles.kakao_login}
             src="/kakao_login/ko/kakao_login_medium_wide.png"
@@ -23,6 +23,15 @@ export default function Home() {
             height={45}
           />
         </a>
+        <button
+          onClick={() => {
+            fetch('https://zumoney.herokuapp.com/oauth/test', {
+              credentials: 'include',
+            })
+          }}
+        >
+          refresh_token이 설정된 cookie 전송 테스트
+        </button>
       </main>
 
       <footer className={styles.footer}>
