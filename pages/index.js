@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <a href="https://zumoney.herokuapp.com/oauth/kakaoAuthorize?redirect_uri=https://localhost:3030">
+        <a href="https://zumoney.herokuapp.com/oauth/kakaoAuthorize?redirect_uri=http://localhost:3000">
           <Image
             className={loginStyles.kakao_login}
             src="/kakao_login/ko/kakao_login_medium_wide.png"
